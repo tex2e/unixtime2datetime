@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="audit.log のイベントIDに含まれているUNIX時間を日本時間の日付形式に変換して、ログを読みやすくするためのツールです。">
+    <title>Unixtime2Datetime</title>
+
+    <script src="./main.js"></script>
+</head>
+<body>
+    <h1>Unixtime2Datetime</h1>
+    <p>audit.log のログ各行のイベントIDに含まれているUNIX時間を日時形式「yyyy/MM/dd hh:mm:ss」に変換して、ログを読みやすくするためのツールです。</p>
+    <p>以下のテキストボックスにUNIX時間を含むログを貼り付けると、日付フォーマットした変換後のテキストが出力されます。</p>
+    <h4>Unixtime Text</h4>
+    <textarea id="auditlog_input" cols="80" rows="20"></textarea>
+    <h4>Converted</h4>
+    <p id="auditlog_output" style="font-family: monospace;">...</p>
+</body>
+</html>
