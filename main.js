@@ -1,5 +1,6 @@
 
 window.onload = function () {
+    // --- Setup Converter ---
     const auditlog_input  = document.querySelector("#auditlog_input");
     const auditlog_output = document.querySelector("#auditlog_output");
     // Show example.
@@ -9,6 +10,9 @@ window.onload = function () {
     auditlog_input.addEventListener('change', unixtime2datetime);
     // Emit event when paste to input.
     auditlog_input.onkeydown = interceptKeys;
+
+    // --- Display Timezone ---
+    document.querySelector("#timezone").innerText = (new Date()).toTimeString().slice(9);
 }
 
 const tagsToReplace = {

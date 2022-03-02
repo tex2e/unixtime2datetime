@@ -11,11 +11,13 @@
 </head>
 <body>
     <h1>Unixtime2Datetime</h1>
-    <p>audit.log のログ各行のイベントIDに含まれているUNIX時間を日時形式「yyyy/MM/dd hh:mm:ss」に変換して、ログを読みやすくするためのツールです。</p>
-    <p>以下のテキストボックスにUNIX時間を含むログを貼り付けると、日付フォーマットした変換後のテキストが出力されます。</p>
+    <p>
+        audit.log のログ各行のイベントIDに含まれているUNIX時間を日時形式「yyyy/MM/dd hh:mm:ss」(ローカル時間) に変換して、ログを読みやすくするためのツールです。
+        以下のテキストボックスにUNIX時間を含むログを貼り付けると、日付フォーマットした変換後のテキストが出力されます。
+    </p>
     <h4>Unixtime Text</h4>
     <textarea id="auditlog_input" cols="80" rows="20" spellcheck="false"></textarea>
-    <h4>Converted</h4>
+    <h4>Converted <small>(<span id="timezone">#</span>)</small></h4>
     <p id="auditlog_output" style="font-family: monospace;">...</p>
 </body>
 </html>
